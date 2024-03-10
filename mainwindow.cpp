@@ -55,7 +55,8 @@ void MainWindow::on_btn_EnviarValores_clicked()
 
     }else{
         _serialPort->write(ui->cb_Valores->currentText().toUtf8());
-        QMessageBox::information(this, "Porta Aberta", "Mensagem enviada com sucesso");
+
+        QMessageBox::information(this, "Porta Aberta","Mensagem Enviada: " + ui->cb_Valores->currentText()  );
 
     }
 }
